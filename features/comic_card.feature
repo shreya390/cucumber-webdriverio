@@ -1,9 +1,9 @@
-# Feature: Marvel Home Page 
+ Feature: Marvel Home Page 
   
-#   Scenario: Testing the Comic Events Card
+   Scenario: Testing the Comic Events Card
       
-#       Given open url "./explore"
-#       When Scroll to the element "any element"
-#       And i save the position of element "element-A"
-#       And I hover on the element "element-A"
-#       Then I expect the elements "element-A" position is not equal to  the saved position
+      Given open url "/explore"
+      When Scroll to the element "//h3[contains(text(),'Comic Events')]"
+      And i save the position of element "(//img[@class='card-thumb-frame__thumbnail img__blur'])[1]"
+      And I  hover on the element "(//img[@class='card-thumb-frame__thumbnail img__blur'])[1]"
+      Then I expect the elements "(//img[@class='card-thumb-frame__thumbnail img__blur'])[1]" position  is not equal to  the saved position
