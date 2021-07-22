@@ -1,5 +1,4 @@
 const { When} = require('@cucumber/cucumber');
-const { assert } = require('chai');
 When("click on the element {string}",(locator) =>{
     var  ad=$(locator);
     ad.click();
@@ -12,7 +11,7 @@ When("Scroll to the element {string}",(locator)=>{
 
 When("i save the position of element {string}",(locator)=>{
   var  comic_card=$(locator);
-  before_location=Number(comic_card.getLocation('y'));
+  var before_location=Number(comic_card.getLocation('y'));
   console.log("the position before hovering is ",before_location);
 });
 
